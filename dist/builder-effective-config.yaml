@@ -1,0 +1,9 @@
+directories:
+  output: dist
+  buildResources: build
+productName: SideDashboard
+appId: takusan23.sidedashboard
+win:
+  target: portable
+  icon: ./src/icon.ico
+electronVersion: 6.0.10

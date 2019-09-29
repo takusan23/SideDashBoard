@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SideDashboard</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body style="background-color: rgba(255, 255, 255, 0)">
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <div class="row">
+        <div class="col s12 m6">
+            <div class="card while" style="-webkit-app-region: drag;background-color: rgba(255, 255, 255, 0.7)">
+                <div class="white-text" style="padding: 10px">
+
+                    <!-- 閉じるボタンとか -->
+                    <!-- ここだけドラッグ -->
+                    <div align="right">
+                        <a style="-webkit-app-region: no-drag; -webkit-user-select: none;"
+                            class="waves-effect waves-light btn grey lighten-1"><i class="material-icons"
+                                onclick="settingOpen()">settings_applications</i></a>
+                        <a style="-webkit-app-region: no-drag; -webkit-user-select: none;"
+                            class="waves-effect waves-light btn red lighten-1"><i class="material-icons"
+                                onclick="windowClose()">close</i></a>
+
+                    </div>
+
+
+                    <!-- それぞれ -->
+                    <div class="card blue lighten-3" style="padding: 5px">
+                        <span class="card-title">
+                            <h5>時計</h5>
+                        </span>
+                        <h5 id="clock"></h5>
+                        <h5 id="date"></h5>
+                    </div>
+
+                    <div class="card red lighten-3" style="padding: 5px">
+                        <span class="card-title">
+                            <h5>電池残量</h5>
+                        </span>
+                        <h5 id="battery">100%</h5>
+                        <h5 id="batterylife"></h5>
+                    </div>
+
+                    <div id="rss_card" class="card orange lighten-3" style="padding: 5px;">
+                        <div>
+                            <h5>RSS
+                                <a style="-webkit-app-region: no-drag; -webkit-user-select: none;float: right;vertical-align: middle;"
+                                    class="waves-effect waves-light btn orange lighten-2"><i onclick="loadRSS()"
+                                        class="material-icons">autorenew</i></a>
+                            </h5>
+
+                        </div>
+                        <div id="rss" style="clear: both;-webkit-app-region: no-drag;overflow: scroll;height: 100px;">
+                        </div>
+                    </div>
+
+                    <div class="card green lighten-3" style="padding: 5px">
+                        <span class="card-title">
+                            <h5>CPU使用率</h5>
+                        </span>
+                        <h5 id="cpuusage"></h5>
+                        <h5 id="cputemp">1</h5>
+                        <h6 id="cpuname"></h6>
+                        <span class="card-title">
+                            <h5>RAM使用量</h5>
+                        </span>
+                        <h5 id="ramusage"></h5>
+                        <h6 id="ramtotal"></h6>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+
+
+</html>

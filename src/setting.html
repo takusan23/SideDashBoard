@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>設定</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <div style="padding: 10px">
+        <div>
+            <h5>RSS取得先</h5>
+            <div class="switch">
+                <label>
+                    <input id="rss_check" type="checkbox">
+                    <span class="lever"></span>
+                    RSSリーダーを利用しない
+                </label>
+            </div>
+            <div class="input-field col s6">
+                <input placeholder="RSS" id="rss" type="text" class="validate">
+            </div>
+        </div>
+        <a onclick="save()" class="waves-effect waves-light btn"><i class="material-icons left">save</i>保存</a>
+    </div>
+
+    <script src="js/setting.js"></script>
+
+</body>
+
+</html>

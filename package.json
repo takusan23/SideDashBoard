@@ -1,0 +1,36 @@
+{
+  "name": "sidedashboard",
+  "version": "1.0.0",
+  "description": "Dashboard",
+  "main": "./src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takusan23/SideDashBoard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/takusan23/SideDashBoard/issues"
+  },
+  "homepage": "https://github.com/takusan23/SideDashBoard#readme",
+  "devDependencies": {
+    "electron": "^6.0.10"
+  },
+  "dependencies": {
+    "battery-level": "^3.0.0",
+    "cheerio-httpcli": "^0.7.4",
+    "node-os-utils": "^1.0.7",
+    "systeminformation": "^4.14.8"
+  },
+  "build": {
+    "productName": "SideDashboard",
+    "appId": "takusan23.sidedashboard",
+    "win": {
+      "target": "portable",
+      "icon": "./src/icon.ico"
+    }
+  }
+}
