@@ -42,9 +42,6 @@ function getBattery() {
     batteryLevel().then(level => {
         document.getElementById('battery').innerText = (level * 100) + "%"
     })
-    sys.battery(battery).then(battery => {
-        document.getElementById('batterylife').innerText = "残り " + battery.timeremaining + "分"
-    })
 }
 
 
@@ -125,8 +122,16 @@ function getDrive() {
 function getWifi() {
     //ネットワーク
     sys.wifiNetworks().then(wifi => {
-        document.getElementById('ssid').innerHTML = wifi[0].ssid
-        document.getElementById('wifiquality').innerHTML = wifi[0].quality + '%'
+        wifi.forEach(net => {
+            if (localStorage.getItem('ssid') != null || localStorage.getItem('ssid') != "") {
+                if (net.ssid == localStorage.getItem('ssid')) {
+                    document.getElementById('ssid').innerHTML = net.ssid
+                    document.getElementById('wifiquality').innerHTML = net.quality + '%'
+                }
+            } else {
+                document.getElementById('network').style.display = 'none'
+            }
+        })
     })
 }
 
