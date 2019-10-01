@@ -30,11 +30,11 @@
                     <!-- ここだけドラッグ -->
                     <div align="right">
                         <a style="-webkit-app-region: no-drag; -webkit-user-select: none;"
-                            class="waves-effect waves-light btn grey lighten-1"><i class="material-icons"
-                                onclick="settingOpen()">settings_applications</i></a>
+                            class="waves-effect waves-light btn grey lighten-1" onclick="settingOpen()"><i
+                                class="material-icons">settings_applications</i></a>
                         <a style="-webkit-app-region: no-drag; -webkit-user-select: none;"
-                            class="waves-effect waves-light btn red lighten-1"><i class="material-icons"
-                                onclick="windowClose()">close</i></a>
+                            class="waves-effect waves-light btn red lighten-1" onclick="windowClose()"><i
+                                class="material-icons">close</i></a>
 
                     </div>
 
@@ -42,7 +42,10 @@
                     <!-- それぞれ -->
                     <div class="card blue lighten-3" style="padding: 5px">
                         <span class="card-title">
-                            <h5>時計</h5>
+                            <h5>
+                                <i class="material-icons">watch_later</i>
+                                時計
+                            </h5>
                         </span>
                         <h5 id="clock"></h5>
                         <h5 id="date"></h5>
@@ -50,7 +53,10 @@
 
                     <div class="card red lighten-3" style="padding: 5px">
                         <span class="card-title">
-                            <h5>電池残量</h5>
+                            <h5>
+                                <i class="material-icons">battery_full</i>
+                                電池残量
+                            </h5>
                         </span>
                         <h5 id="battery">100%</h5>
                         <h5 id="batterylife"></h5>
@@ -58,9 +64,11 @@
 
                     <div id="rss_card" class="card orange lighten-3" style="padding: 5px;">
                         <div>
-                            <h5>RSS
+                            <h5>
+                                <i class="material-icons">rss_feed</i>
+                                RSS
                                 <a style="-webkit-app-region: no-drag; -webkit-user-select: none;float: right;vertical-align: middle;"
-                                    class="waves-effect waves-light btn orange lighten-2"><i onclick="loadRSS()"
+                                    class="waves-effect waves-light btn orange lighten-2" onclick="loadRSS()"><i
                                         class="material-icons">autorenew</i></a>
                             </h5>
 
@@ -69,20 +77,38 @@
                         </div>
                     </div>
 
-                    <div class="card green lighten-3" style="padding: 5px">
+                    <div class="card green lighten-3"
+                        style="-webkit-app-region: no-drag; -webkit-user-select: none;padding: 5px;overflow: scroll;height: 300px;">
                         <span class="card-title">
-                            <h5>CPU使用率</h5>
+                            <h5>
+                                <i class="material-icons">memory</i>
+                                CPU使用率
+                            </h5>
                         </span>
                         <h5 id="cpuusage"></h5>
-                        <h5 id="cputemp">1</h5>
                         <h6 id="cpuname"></h6>
                         <span class="card-title">
-                            <h5>RAM使用量</h5>
+                            <h5>
+                                <i class="material-icons">memory</i>
+                                RAM使用量
+                            </h5>
                         </span>
                         <h5 id="ramusage"></h5>
                         <h6 id="ramtotal"></h6>
+                        <h5>
+                            <i class="material-icons">storage</i>
+                            ストレージ
+                        </h5>
+                        <h5 id="driveusagepar"></h5>
+                        <h6 id="driveusage"></h6>
+                        <h6 id="drivename"></h6>
+                        <h5>
+                            <i class="material-icons">network_wifi</i>
+                            ネットワーク
+                        </h5>
+                        <h5 id="ssid"></h5>
+                        <h6 id="wifiquality"></h6>
                     </div>
-
                 </div>
             </div>
         </div>

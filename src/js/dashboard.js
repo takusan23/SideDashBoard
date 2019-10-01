@@ -3,6 +3,11 @@ window.onload = function () {
     if (localStorage.getItem('rss_check') == "true") {
         document.getElementById('rss_card').style.display = "none"
     }
+    //ストレージ
+    sys.diskLayout().then(disk => {
+        document.getElementById('drivename').innerHTML = disk[0].name
+        document.getElementById('driveusage').innerHTML = (this.Math.round(disk[0].size / (1073741824))) + 'GB'
+    })
 }
 
 setInterval(function (e) {
@@ -19,6 +24,8 @@ setInterval(function (e) {
     getCPUUsage()
     getBattery()
     getRAMUsage()
+    getDrive()
+    getWifi()
 
 }, 1000)
 
@@ -48,11 +55,6 @@ function getCPUUsage() {
         .then(usage => {
             document.getElementById('cpuusage').innerText = usage + "%"
         })
-
-    //温度
-    sys.cpuTemperature().then(cpu => {
-        document.getElementById('cputemp').innerText = cpu.main + "度"
-    })
 
     //CPUの名前
     document.getElementById('cpuname').innerText = cpu.model()
@@ -111,6 +113,21 @@ function loadRSS() {
                 console.log('終了');
             });
     }
+}
+
+function getDrive() {
+    //ドライブ
+    sys.fsSize().then(fs => {
+        document.getElementById('driveusagepar').innerHTML = Math.round(fs[0].use) + '%'
+    })
+}
+
+function getWifi() {
+    //ネットワーク
+    sys.wifiNetworks().then(wifi => {
+        document.getElementById('ssid').innerHTML = wifi[0].ssid
+        document.getElementById('wifiquality').innerHTML = wifi[0].quality + '%'
+    })
 }
 
 function openBrowser(link) {
