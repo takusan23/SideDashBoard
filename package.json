@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/takusan23/SideDashBoard#readme",
   "devDependencies": {
-    "electron": "^6.0.10"
+    "electron": "^7.2.4"
   },
   "dependencies": {
     "battery-level": "^3.0.0",
