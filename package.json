@@ -23,7 +23,7 @@
     "battery-level": "^3.0.0",
     "cheerio-httpcli": "^0.7.4",
     "node-os-utils": "^1.0.7",
-    "systeminformation": "^4.14.8"
+    "systeminformation": "^4.30.5"
   },
   "build": {
     "productName": "SideDashboard",
